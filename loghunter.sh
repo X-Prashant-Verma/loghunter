@@ -24,10 +24,14 @@ current_time=$(date +"%Y-%m-%d_%H-%M")
 # Store and find the severity level from the logs file. Also deduplicate and count them
 sorted_report=$( grep -i "$severity_level" "$file_path" | awk -F' ' '{$1=$2=$3=""; print $0}' | sort | uniq -c | sort -rn ) 
 
+# Create report-files if doesn't exits
+mkdir -p ./report-files
+
 # Check whether logs have desired severity_level or Not
 if [ -z "$sorted_report" ]
 then 
     echo "No $severity_level Found in the logs"
 else
     echo "$sorted_report" > ./report-files/loghunter_report_$current_time.txt
+    echo "Report saved to ./report-files/loghunter_report_$current_time.txt"
 fi
