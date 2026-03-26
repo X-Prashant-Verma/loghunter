@@ -15,4 +15,5 @@ then
     exit 1
 fi
 
+grep -i "$severity_level" "$file_path"
 
