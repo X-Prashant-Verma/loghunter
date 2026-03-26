@@ -1,10 +1,10 @@
-Mar 26 20:15:01 web-server-01 CRON[1420]: [INFO] (root) CMD (python3 /opt/scripts/backup.py)
-Mar 26 20:15:05 web-server-01 systemd[1]: [INFO] Starting Rotate log files...
-Mar 26 20:15:05 web-server-01 systemd[1]: [INFO] logrotate.service: Succeeded.
-Mar 26 20:15:05 web-server-01 systemd[1]: [INFO] Finished Rotate log files.
-Mar 26 20:16:22 web-server-01 NetworkManager[650]: [INFO] connectivity: check-in (connected)
-Mar 26 20:17:10 web-server-01 sshd[1588]: [INFO] Accepted publickey for dev_user from 10.0.0.15 port 51222 ssh2
-Mar 26 20:17:10 web-server-01 systemd[1]: [INFO] Created slice User Slice of UID 1001.
-Mar 26 20:17:10 web-server-01 systemd-logind[580]: [INFO] New session 124 of user dev_user.
-Mar 26 20:18:45 web-server-01 kernel: [INFO] [ 4521.123456] ufw: [ALLOW] IN=eth0 OUT= SRC=192.168.1.100
-Mar 26 20:20:01 web-server-01 CRON[1595]: [INFO] (root) CMD (command -v debian-sa1 > /dev/null)
+2026-03-26 20:15:01 INFO   CRON job triggered: backup.py
+2026-03-26 20:15:05 INFO   Starting Rotate log files...
+2026-03-26 20:15:05 INFO   logrotate.service: Succeeded
+2026-03-26 20:15:05 INFO   Finished Rotate log files
+2026-03-26 20:16:22 INFO   NetworkManager connectivity: check-in (connected)
+2026-03-26 20:17:10 INFO   Accepted publickey for dev_user from 10.0.0.15 port 51222 ssh2
+2026-03-26 20:17:10 INFO   Created slice User Slice of UID 1001
+2026-03-26 20:17:10 INFO   New session 124 of user dev_user
+2026-03-26 20:18:45 INFO   ufw: ALLOW IN=eth0 SRC=192.168.1.100
+2026-03-26 20:20:01 INFO   CRON job triggered: debian-sa1
