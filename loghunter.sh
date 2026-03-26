@@ -15,5 +15,10 @@ then
     exit 1
 fi
 
-grep -i "$severity_level" "$file_path" | awk -F' ' '{$1=$2=$3=""; print $0}' | sort | uniq -c | sort -rn
+current_time=$(date +"%Y-%m-%d_%H-%M")
+
+sorted_report=$( grep -i "$severity_level" "$file_path" | awk -F' ' '{$1=$2=$3=""; print $0}' | sort | uniq -c | sort -rn ) 
+
+echo "$sorted_report" > ./report-files/loghunter_report_$current_time.txt
+
 
