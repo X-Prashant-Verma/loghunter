@@ -15,4 +15,5 @@ then
     exit 1
 fi
 
-grep -i "$severity_level" "$file_path" | awk -F' ' '{$1=$2=$3=""; print $0}' | sort | uniq
+grep -i "$severity_level" "$file_path" | awk -F' ' '{$1=$2=$3=""; print $0}' | sort | uniq -c 
+
