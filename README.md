@@ -1,6 +1,6 @@
 # 🪵 LogHunter: Automated Log Analysis Utility
 
-**LogHunter** is a Bash-based automation tool designed to parse, filter, and aggregate system logs[cite: 1]. It streamlines the debugging process by isolating specific severity levels and providing a frequency-based report of unique events.
+**LogHunter** is a Bash-based automation tool designed to parse, filter, and aggregate system logs. It streamlines the debugging process by isolating specific severity levels and providing a frequency-based report of unique events.
 
 ## 🎯 Purpose
 In complex systems, logs can be overwhelming. LogHunter allows a user to:
@@ -30,9 +30,9 @@ The tool strips timestamps and metadata to group identical messages:
 ```
 
 ## ⚙️ Technical Implementation
-* **Dynamic Filtering:** Uses `grep -i` for case-insensitive severity matching[cite: 1].
-* **Data Transformation:** Leverages `awk` to remove variable timestamps, allowing for accurate grouping of unique events[cite: 1].
-* **Frequency Mapping:** Utilizes `sort | uniq -c` to generate a count of occurrences, followed by `sort -rn` to display the most frequent issues first[cite: 1].
+* **Dynamic Filtering:** Uses `grep -i` for case-insensitive severity matching.
+* **Data Transformation:** Leverages `awk` to remove variable timestamps, allowing for accurate grouping of unique events.
+* **Frequency Mapping:** Utilizes `sort | uniq -c` to generate a count of occurrences, followed by `sort -rn` to display the most frequent issues first.
 * **Persistent Storage:** Automatically saves results into a `./report-files/` directory with a unique timestamp (`YYYY-MM-DD_HH-MM`).
 
 ## 🚀 Future Roadmap
